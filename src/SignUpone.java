@@ -7,6 +7,7 @@ public class SignUpone extends JFrame {
     SignUpone(){
 
         setLayout(null);
+        setFocusable(true);
 
         Random rn = new Random();
         long random = Math.abs((rn.nextLong() %9000L)+1000L);
@@ -57,12 +58,19 @@ public class SignUpone extends JFrame {
 
         JLabel gender = new JLabel("Gender: ");
         gender.setFont(new Font("Raleway",Font.BOLD,20));
-        gender.setBounds(400,240,400,30);
+        gender.setBounds(400,240,90,30);
         add(gender);
-        JTextField genderTextField = new JTextField();
-        genderTextField.setFont(new Font("Raleway",Font.PLAIN,20));
-        genderTextField.setBounds(485,240,215,30);
-        add(genderTextField);
+        JRadioButton male = new JRadioButton("Male");
+        male.setBounds(490,240,60,30);
+        male.setBackground(Color.WHITE);
+        add(male);
+        JRadioButton female = new JRadioButton("Female");
+        female.setBounds(560,240,100,30);
+        female.setBackground(Color.WHITE);
+        add(female);
+        ButtonGroup genderGroup = new ButtonGroup();
+        genderGroup.add(male);
+        genderGroup.add(female);
 
         JLabel email = new JLabel("Email Address: ");
         email.setFont(new Font("Raleway",Font.BOLD,20));
@@ -75,9 +83,19 @@ public class SignUpone extends JFrame {
 
         JLabel maritalStats = new JLabel("Marital Status: ");
         maritalStats.setFont(new Font("Raleway",Font.BOLD,20));
-        maritalStats.setBounds(100,340,400,30);
+        maritalStats.setBounds(100,340,200,30);
         add(maritalStats);
-
+        JRadioButton single = new JRadioButton("Single");
+        single.setBounds(250,340,70,30);
+        single.setBackground(Color.WHITE);
+        add(single);
+        JRadioButton married = new JRadioButton("Married");
+        married.setBounds(335,340,100,30);
+        married.setBackground(Color.WHITE);
+        add(married);
+        ButtonGroup maritalStatsGroup = new ButtonGroup();
+        maritalStatsGroup.add(single);
+        maritalStatsGroup.add(married);
 
         JLabel address = new JLabel("Res. Address: ");
         address.setFont(new Font("Raleway",Font.BOLD,20));
@@ -115,6 +133,20 @@ public class SignUpone extends JFrame {
         pincodeTextField.setFont(new Font("Raleway",Font.PLAIN,20));
         pincodeTextField.setBounds(250,540,450,30);
         add(pincodeTextField);
+
+        JButton clear = new JButton("Clear");
+        clear.setBounds(320,600,100,30);
+        clear.setBackground(Color.BLACK);
+        clear.setForeground(Color.WHITE);
+        clear.setFont(new Font("Raleway",Font.BOLD,14));
+        add(clear);
+
+        JButton next = new JButton("Next");
+        next.setBounds(430,600,100,30);
+        next.setFont(new Font("Raleway",Font.BOLD,14));
+        next.setBackground(Color.BLACK);
+        next.setForeground(Color.WHITE);
+        add(next);
 
 
         setSize(850,800);
