@@ -18,5 +18,6 @@ public class SignUpTwo extends JFrame {
 
     public static void main(String[] args) {
         new SignUpTwo();
+        System.out.println("This is banking management system");
     }
 }
