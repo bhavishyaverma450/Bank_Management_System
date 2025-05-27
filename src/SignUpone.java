@@ -5,7 +5,7 @@ import java.util.*;
 
 public class SignUpone extends JFrame {
     SignUpone(){
-
+        Int c=10;
         setLayout(null);
         setFocusable(true);
 
