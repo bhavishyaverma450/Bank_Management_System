@@ -6,6 +6,7 @@ public class SignUpTwo extends JFrame {
 
     SignUpTwo() {
 
+        //setVisible(true);
         setLayout(null);
         
 
